@@ -33,7 +33,7 @@ export const columns: ColumnDef<Todo>[] = [
       const task = row.original;
       const router = useRouter();
       return (
-        <div className="flex w-full items-center justify-center">
+        <div className="flex  items-center  ">
           <Checkbox
             onCheckedChange={async () => {
               await updateTodoStatus({
