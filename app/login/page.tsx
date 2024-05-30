@@ -15,8 +15,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { LoaderCircle, OctagonAlert } from "lucide-react";
+import { ExternalLink, LoaderCircle, OctagonAlert } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Login({
   searchParams,
@@ -119,6 +120,15 @@ export default function Login({
           </Button>
         </>
       </div>
+      <Link
+        href="https://github.com/luanlcampos/todo-list-with-tags"
+        target="_blank"
+      >
+        <Button variant={"link"} className="inline-flex gap-x-2 items-center">
+          <span className="">Github project repo</span>
+          <ExternalLink className="w-4 h-4" />
+        </Button>
+      </Link>
     </div>
   );
 }

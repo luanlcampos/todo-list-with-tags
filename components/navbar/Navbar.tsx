@@ -1,5 +1,4 @@
-import AccountMenu from "../AccountMenu";
-import { Button } from "../ui/button";
+import AccountMenu from "./AccountMenu";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 type NavbarProps = {

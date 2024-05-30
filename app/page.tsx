@@ -1,9 +1,9 @@
-import AccountMenu from "../components/AccountMenu";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { DataTable } from "@/components/table/DataTable";
 import { Todo, columns } from "@/components/table/Columns";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 async function getData(): Promise<Todo[]> {
   const supabase = createClient();
@@ -26,8 +26,6 @@ async function getData(): Promise<Todo[]> {
 
 export default async function Index() {
   const canInitSupabaseClient = () => {
-    // This function is just for the interactive tutorial.
-    // Feel free to remove it once you have Supabase connected.
     try {
       createClient();
       return true;
@@ -63,19 +61,7 @@ export default async function Index() {
         </main>
       </div>
 
-      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
-        <p>
-          Check the code at:
-          <a
-            href="https://github.com/luanlcampos"
-            target="_blank"
-            className="font-bold hover:underline"
-            rel="noreferrer"
-          >
-            Github
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
